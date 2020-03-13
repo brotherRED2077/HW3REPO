@@ -19,6 +19,9 @@ coverage
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
 
+# environment files
+.env
+
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
 
@@ -30,5 +33,7 @@ node_modules
 # Users Environment Variables
 .lock-wscript
 
-# Runtime configuration for swagger app
-config/runtime.yaml
+# Apigee 127 deployment
+config/.a127_env
+config/.a127_secrets
+config/.a127_services
