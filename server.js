@@ -96,6 +96,51 @@ router.post('/signin', function(req, res) {
 
     });
 });
+router.route('/movie')
+
+    .post(authJwtController.isAuthenticated, function (req, res) {
+        console.log(req.body);
+        var movie = new Movie();
+        movie.title = req.body.title;
+        movie.yearReleased = req.body.yearReleased;
+        movie.genre = req.body.genre;
+        movie.actors = req.body.actors;
+        // save the movie
+        if (Movie.findOne({title: movie.title}) != null) {
+            movie.save(function (err) {
+                if (err) {
+                    // duplicate entry
+                    if (err.code == 11000)
+                        res.json({success: false, message: 'That movie already exists. '});
+                    else
+                        return res.send(err);
+                }else res.json({success: true, message: 'Created'});
+            });
+        };
+    })
+    .put(authJwtController.isAuthenticated, function (req, res) {
+        var qtitle = req.query.title;
+        if (Movie.findOne({title: qtitle}) != null) {
+            var newVals = { $set: req.body };
+            Movie.updateOne({title: qtitle}, newVals, function(err, obj) {
+                if (err) res.send(err);
+                else res.json({success: true, message: 'Updated'});
+            })
+        };
+    })
+
+    .get(authJwtController.isAuthenticated, function (req, res) {
+        Movie.find(function (err, movie) {
+            if(err) res.send(err);
+            res.json(movie);
+        })
+    })
+    .delete(authJwtController.isAuthenticated, function (req, res) {
+        Movie.deleteOne({title: req.body.title}, function(err, obj) {
+            if (err) res.send(err);
+            else res.json({success: true, message: 'Deleted'});
+        })
+    });
 
 app.use('/', router);
 app.listen(process.env.PORT || 8080);
