@@ -159,7 +159,7 @@ router.route('/movie')
             }
     ])*/
         // save the movie
-        if (movie.findOne({title: movie.title}) != null) {
+        if (Movie.findOne({title: movie.title}) != null) {
             movie.save(function (err) {
                 if (err) {
                     // duplicate entry
@@ -173,9 +173,9 @@ router.route('/movie')
     })
     .put(authJwtController.isAuthenticated, function (req, res) {
         var qtitle = req.query.title;
-        if (movie.findOne({title: qtitle}) != null) {
+        if (Movie.findOne({title: qtitle}) != null) {
             var newVals = { $set: req.body };
-            movie.updateOne({title: qtitle}, newVals, function(err, obj) {
+            Movie.updateOne({title: qtitle}, newVals, function(err, obj) {
                 if (err) res.send(err);
                 else res.json({success: true, message: 'Updated'});
             })
