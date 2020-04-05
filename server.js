@@ -3,6 +3,7 @@ var bodyParser = require('body-parser');
 var passport = require('passport');
 var authJwtController = require('./auth_jwt');
 var User = require('./Users');
+var Movie = require('./Movie');
 var jwt = require('jsonwebtoken');
 var cors = require('cors');
 
