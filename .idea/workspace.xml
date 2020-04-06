@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a5dbe83d-e006-4733-be76-9c67ee3092a6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +100,7 @@
       <workItem from="1585254291171" duration="885000" />
       <workItem from="1585414974988" duration="5539000" />
       <workItem from="1585707446805" duration="619000" />
-      <workItem from="1585953468584" duration="10516000" />
+      <workItem from="1585953468584" duration="11429000" />
     </task>
     <task id="LOCAL-00001" summary="movie js file created">
       <created>1585518779134</created>
@@ -150,7 +151,21 @@
       <option name="project" value="LOCAL" />
       <updated>1586135010975</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="server js updated">
+      <created>1586135964612</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1586135964612</updated>
+    </task>
+    <task id="LOCAL-00009" summary="server js updated">
+      <created>1586136013058</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1586136013058</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
