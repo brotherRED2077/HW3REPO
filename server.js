@@ -9,7 +9,7 @@ var cors = require('cors');
 
 var app = express();
 module.exports = app; // for testing
-app.use(cors())
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -98,48 +98,8 @@ router.post('/signin', function(req, res) {
     });
 });
 
-router.route('/review')
-    .post(authJwtController.isAuthenticated, function (req, res) {
-        console.log(req.body);
-        var review = new Review();
-        review.title = req.body.title;
-        review.yearReleased = req.body.yearReleased;
-        review.genre = req.body.genre;
-        review.actors = req.body.actors;
-        // save the review
-        if (Review.findOne({title: movie.title}) != null) {
-            review.save(function (err) {
-                if (err) {
-                    // duplicate entry
-                    if (err.code == 11000)
-                        res.json({success: false, message: 'That review already exists. '});
-                    else
-                        return res.send(err);
-                }else res.json({success: true, message: 'Created'});
-            });
-        };
-    })
-    .put(authJwtController.isAuthenticated, function (req, res) {
-        var qtitle = req.query.title;
-        if (Review.findOne({title: qtitle}) != null) {
-            var newVals = { $set: req.body };
-            Movie.updateOne({title: qtitle}, newVals, function(err, obj) {
-                if (err) res.send(err);
-                else res.json({success: true, message: 'Updated'});
-            })
-        };
-    })
-
-    .get(authJwtController.isAuthenticated, function (req, res) {
-        Review.find(function (err, review) {
-            if(err) res.send(err);
-            res.json(review);
-        })
-    })
-
 
 router.route('/movie')
-
     .post(authJwtController.isAuthenticated, function (req, res) {
         console.log(req.body);
         var movie = new Movie();
@@ -195,6 +155,47 @@ router.route('/movie')
             else res.json({success: true, message: 'Deleted'});
         })
     });
+
+
+router.route('/review')
+    .post(authJwtController.isAuthenticated, function (req, res) {
+        console.log(req.body);
+        var review = new Review();
+        review.title = req.body.title;
+        review.yearReleased = req.body.yearReleased;
+        review.genre = req.body.genre;
+        review.actors = req.body.actors;
+        // save the review
+        if (Review.findOne({title: movie.title}) != null) {
+            review.save(function (err) {
+                if (err) {
+                    // duplicate entry
+                    if (err.code == 11000)
+                        res.json({success: false, message: 'That review already exists. '});
+                    else
+                        return res.send(err);
+                }else res.json({success: true, message: 'Created'});
+            });
+        };
+    })
+    .put(authJwtController.isAuthenticated, function (req, res) {
+        var qtitle = req.query.title;
+        if (Review.findOne({title: qtitle}) != null) {
+            var newVals = { $set: req.body };
+            Movie.updateOne({title: qtitle}, newVals, function(err, obj) {
+                if (err) res.send(err);
+                else res.json({success: true, message: 'Updated'});
+            })
+        };
+    })
+
+    .get(authJwtController.isAuthenticated, function (req, res) {
+        Review.find(function (err, review) {
+            if(err) res.send(err);
+            res.json(review);
+        })
+    })
+
 
 app.use('/', router);
 app.listen(process.env.PORT || 8080);
