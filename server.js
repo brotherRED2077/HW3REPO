@@ -136,7 +136,7 @@ router.route('/movie')
     .get(authJwtController.isAuthenticated, function (req, res) {
         Movie.find(function (err, movie) {
             if(err) res.send(err);
-            Movie.movies.aggregate([
+            Movie.movie.aggregate([
                 {
                     $lookup:
                         {
