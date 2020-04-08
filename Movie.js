@@ -11,17 +11,7 @@ var MovieSchema = new Schema({
     yearReleased: { type: Date, required: true },
     genre: { type: String, required: true, enum: ['Action', 'Adventure','Anime', 'Cartoon', 'Comedy', 'Drama', 'Horror', 'Mystery', ] },
     actors: { type: [{actorName: String, characterName: String}], required: true }
-    test.movies.aggregate([
-        {
-            $lookup:
-                {
-                    from: "reviews",
-                    localField: "title",
-                    foreignField: "movieName",
-                    as: "reviews"
-                }
-        }
-    ])
+
 });
 
 module.exports = mongoose.model('Movie', MovieSchema);

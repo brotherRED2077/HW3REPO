@@ -136,6 +136,17 @@ router.route('/movie')
     .get(authJwtController.isAuthenticated, function (req, res) {
         Movie.find(function (err, movie) {
             if(err) res.send(err);
+            test.movies.aggregate([
+                {
+                    $lookup:
+                        {
+                            from: "reviews",
+                            localField: "title",
+                            foreignField: "movieName",
+                            as: "reviews"
+                        }
+                }
+            ])
             res.json(movie);
 
         })
