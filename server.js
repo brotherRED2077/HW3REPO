@@ -162,10 +162,11 @@ router.route('/review')
     .post(authJwtController.isAuthenticated, function (req, res) {
         console.log(req.body);
         var review = new Review();
-        review.reviewerName = req.body.title;
+        review.movieName = req.body.movieName;
+        review.reviewerName = req.body.reviewerName;
         review.yearReleased = req.body.yearReleased;
-        review.quote = req.body.genre;
-        review.rateing = req.body.actors;
+        review.quote = req.body.quote;
+        review.rateing = req.body.rateing;
         // save the review
         if (Review.findOne({title: movie.title}) != null) {
             review.save(function (err) {
@@ -183,7 +184,7 @@ router.route('/review')
         var qtitle = req.query.title;
         if (Review.findOne({title: qtitle}) != null) {
             var newVals = { $set: req.body };
-            Movie.updateOne({title: qtitle}, newVals, function(err, obj) {
+            Review.updateOne({title: qtitle}, newVals, function(err, obj) {
                 if (err) res.send(err);
                 else res.json({success: true, message: 'Updated'});
             })
