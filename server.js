@@ -136,7 +136,7 @@ router.route('/movie')
     .get(authJwtController.isAuthenticated, function (req, res) {
         Movie.find(function (err, movie) {
             if(err) res.send(err);
-            Movie.movie.aggregate([
+            moviedb.movies.aggregate([
                 {
                     $lookup:
                         {
@@ -146,7 +146,7 @@ router.route('/movie')
                             as: "reviews"
                         }
                 }
-            ])
+            ]);
             res.json(movie);
 
         })
