@@ -108,17 +108,7 @@ router.route('/movie')
         movie.yearReleased = req.body.yearReleased;
         movie.genre = req.body.genre;
         movie.actors = req.body.actors;
-        db.getCollection("movies").aggregate([
-            {
-                $lookup:
-                    {
-                        from: "reviews",
-                        localField: "title",
-                        foreignField: "movieName",
-                        as: "reviews"
-                    }
-            }
-        ])
+
         // save the movie
         if (Movie.findOne({title: movie.title}) != null) {
             movie.save(function (err) {
