@@ -108,7 +108,7 @@ router.route('/movie')
         movie.yearReleased = req.body.yearReleased;
         movie.genre = req.body.genre;
         movie.actors = req.body.actors;
-        test.movies.aggregate([
+        db.getCollection("movies").aggregate([
             {
                 $lookup:
                     {
@@ -168,7 +168,7 @@ router.route('/review')
         review.quote = req.body.quote;
         review.rateing = req.body.rateing;
         // save the review
-        if (Review.findOne({title: movie.title}) != null) {
+        if (Review.findOne({movieName: review.movieName} && {reviewerName: review.reviewerName}) != null) {
             review.save(function (err) {
                 if (err) {
                     // duplicate entry
@@ -181,10 +181,11 @@ router.route('/review')
         };
     })
     .put(authJwtController.isAuthenticated, function (req, res) {
-        var qtitle = req.query.title;
-        if (Review.findOne({title: qtitle}) != null) {
+        var qmovie = req.query.movieName;
+        var qreviewer = req.query.reviewerName;
+        if (Review.findOne({movieName: qmovie} && {reviewerName: qreviewer}) != null) {
             var newVals = { $set: req.body };
-            Review.updateOne({title: qtitle}, newVals, function(err, obj) {
+            Review.updateOne({movieName: qmovie} && {reviewerName: qreviewer}, newVals, function(err, obj) {
                 if (err) res.send(err);
                 else res.json({success: true, message: 'Updated'});
             })
