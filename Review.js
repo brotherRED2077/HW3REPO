@@ -11,7 +11,7 @@ var reviewSchema = new Schema({
     reviewerName: { type: String, required: true},
     yearReleased: { type: Date, required: true },
     quote: { type: String, required: true },
-    rateing: { type: integer, required: true }
+    rateing: { type: Number, required: true }
 });
 
 module.exports = mongoose.model('Review', reviewSchema);
