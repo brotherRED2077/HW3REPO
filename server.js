@@ -4,6 +4,7 @@ var passport = require('passport');
 var authJwtController = require('./auth_jwt');
 var User = require('./Users');
 var Movie = require('./Movie');
+var Review = require('./Review');
 var jwt = require('jsonwebtoken');
 var cors = require('cors');
 
@@ -161,10 +162,10 @@ router.route('/review')
     .post(authJwtController.isAuthenticated, function (req, res) {
         console.log(req.body);
         var review = new Review();
-        review.title = req.body.title;
+        review.reviewerName = req.body.title;
         review.yearReleased = req.body.yearReleased;
-        review.genre = req.body.genre;
-        review.actors = req.body.actors;
+        review.quote = req.body.genre;
+        review.rateing = req.body.actors;
         // save the review
         if (Review.findOne({title: movie.title}) != null) {
             review.save(function (err) {
