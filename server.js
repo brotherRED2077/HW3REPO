@@ -134,8 +134,8 @@ router.route('/movie')
     })
 
     .get(authJwtController.isAuthenticated, function (req, res) {
-        Movie.find(function (err, movie) {
-            if(err) res.send(err);
+        //Movie.find(function (err, movie) {
+            //if(err) res.send(err);
             Movie.aggregate([{
                     $lookup:
                         {
@@ -145,9 +145,9 @@ router.route('/movie')
                             as: "movieReviews"
                         }
                 }
-            ]);
+            ]).exec(function(err,movie){
+            if(err) res.send(err);
             res.json(movie);
-
         })
     })
     .delete(authJwtController.isAuthenticated, function (req, res) {
