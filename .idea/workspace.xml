@@ -4,6 +4,7 @@
     <list default="true" id="a5dbe83d-e006-4733-be76-9c67ee3092a6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Movie.js" beforeDir="false" afterPath="$PROJECT_DIR$/Movie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +107,7 @@
       <workItem from="1586558253474" duration="1218000" />
       <workItem from="1586571686713" duration="791000" />
       <workItem from="1587080349086" duration="2877000" />
-      <workItem from="1587321067645" duration="4141000" />
+      <workItem from="1587321067645" duration="4768000" />
     </task>
     <task id="LOCAL-00001" summary="movie js file created">
       <created>1585518779134</created>
