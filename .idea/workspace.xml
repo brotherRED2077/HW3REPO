@@ -106,7 +106,7 @@
       <workItem from="1586558253474" duration="1218000" />
       <workItem from="1586571686713" duration="791000" />
       <workItem from="1587080349086" duration="2877000" />
-      <workItem from="1587321067645" duration="1660000" />
+      <workItem from="1587321067645" duration="2732000" />
     </task>
     <task id="LOCAL-00001" summary="movie js file created">
       <created>1585518779134</created>
@@ -213,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587170689874</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="updated movie for imgurl">
+      <created>1587324486239</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1587324486239</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,7 +232,8 @@
     <MESSAGE value="movie js updated" />
     <MESSAGE value="server js updated" />
     <MESSAGE value="base commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="base commit" />
+    <MESSAGE value="updated movie for imgurl" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated movie for imgurl" />
   </component>
   <component name="WindowStateProjectService">
     <state x="352" y="0" key="CommitChangelistDialog2" timestamp="1587324484071">
