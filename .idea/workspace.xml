@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a5dbe83d-e006-4733-be76-9c67ee3092a6" name="Default Changelist" comment="" />
+    <list default="true" id="a5dbe83d-e006-4733-be76-9c67ee3092a6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movie.js" beforeDir="false" afterPath="$PROJECT_DIR$/Movie.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,7 +106,7 @@
       <workItem from="1586558253474" duration="1218000" />
       <workItem from="1586571686713" duration="791000" />
       <workItem from="1587080349086" duration="2877000" />
-      <workItem from="1587321067645" duration="3105000" />
+      <workItem from="1587321067645" duration="4141000" />
     </task>
     <task id="LOCAL-00001" summary="movie js file created">
       <created>1585518779134</created>
@@ -217,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587324486239</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="updated movie for imgurl">
+      <created>1587326238760</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1587326238760</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
