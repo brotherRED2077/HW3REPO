@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a5dbe83d-e006-4733-be76-9c67ee3092a6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movie.js" beforeDir="false" afterPath="$PROJECT_DIR$/Movie.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +105,8 @@
       <workItem from="1586302598114" duration="10867000" />
       <workItem from="1586558253474" duration="1218000" />
       <workItem from="1586571686713" duration="791000" />
-      <workItem from="1587080349086" duration="1429000" />
+      <workItem from="1587080349086" duration="2877000" />
+      <workItem from="1587321067645" duration="1660000" />
     </task>
     <task id="LOCAL-00001" summary="movie js file created">
       <created>1585518779134</created>
@@ -204,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586558780057</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="base commit">
+      <created>1587170689874</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1587170689874</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,18 +224,19 @@
     <MESSAGE value="movie js file created&#10;reviews js file created&#10;aggregate function attempted" />
     <MESSAGE value="movie js updated" />
     <MESSAGE value="server js updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="server js updated" />
+    <MESSAGE value="base commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="base commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="352" y="0" key="CommitChangelistDialog2" timestamp="1587170685306">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="352" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587170685306" />
-    <state x="535" y="179" key="FileChooserDialogImpl" timestamp="1587080573121">
+    <state x="535" y="179" key="FileChooserDialogImpl" timestamp="1587321988927">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="474" y="158" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1585078719797" />
-    <state x="535" y="179" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587080573121" />
+    <state x="535" y="179" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587321988927" />
     <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1586146508047">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
