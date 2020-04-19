@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5dbe83d-e006-4733-be76-9c67ee3092a6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +105,7 @@
       <workItem from="1586558253474" duration="1218000" />
       <workItem from="1586571686713" duration="791000" />
       <workItem from="1587080349086" duration="2877000" />
-      <workItem from="1587321067645" duration="9210000" />
+      <workItem from="1587321067645" duration="10039000" />
     </task>
     <task id="LOCAL-00001" summary="movie js file created">
       <created>1585518779134</created>
@@ -234,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587328474483</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="updated server for avg rating">
+      <created>1587339045363</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1587339045363</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,7 +254,8 @@
     <MESSAGE value="base commit" />
     <MESSAGE value="updated movie for imgurl" />
     <MESSAGE value="updated server for imgurl" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated server for imgurl" />
+    <MESSAGE value="updated server for avg rating" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated server for avg rating" />
   </component>
   <component name="WindowStateProjectService">
     <state x="352" y="0" key="CommitChangelistDialog2" timestamp="1587339042191">
