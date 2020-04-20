@@ -144,8 +144,9 @@ router.route('/movie')
                             localField: "title",
                             foreignField: "movieName",
                             as: "movieReviews"
-                        },
-                    $addFields:
+                        }
+                    },
+                {$addFields:
                         {
                             avgRating: { $avg: "$rating" }
                         }
