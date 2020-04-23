@@ -9,7 +9,6 @@ mongoose.set('useCreateIndex', true);
 var reviewSchema = new Schema({
     title: { type: String, required: true },
     reviewerName: { type: String, required: true},
-    yearReleased: { type: Date, required: true },
     quote: { type: String, required: true },
     rateing: { type: Number, required: true }
 });

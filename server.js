@@ -141,7 +141,7 @@ router.route('/movie')
                         {
                             from: "reviews",
                             localField: "title",
-                            foreignField: "movieName",
+                            foreignField: "title",
                             as: "movieReviews"
                         }
                     },
@@ -169,11 +169,10 @@ router.route('/review')
         var review = new Review();
         review.title = req.body.title;
         review.reviewerName = req.body.reviewerName;
-        review.yearReleased = req.body.yearReleased;
         review.quote = req.body.quote;
         review.rateing = req.body.rateing;
         // save the review
-        if (Review.findOne({movieName: review.movieName} && {reviewerName: review.reviewerName}) != null) {
+        if (Review.findOne({title: review.movieName} && {reviewerName: review.reviewerName}) != null) {
             review.save(function (err) {
                 if (err) {
                     // duplicate entry
@@ -186,7 +185,7 @@ router.route('/review')
         };
     })
     .put(authJwtController.isAuthenticated, function (req, res) {
-        var qmovie = req.query.movieName;
+        var qmovie = req.query.title;
         var qreviewer = req.query.reviewerName;
         if (Review.findOne({title: qmovie} && {reviewerName: qreviewer}) != null) {
             var newVals = { $set: req.body };
