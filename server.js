@@ -135,8 +135,7 @@ router.route('/movie')
     })
 
     .get(authJwtController.isAuthenticated, function (req, res) {
-        //Movie.find(function (err, movie) {
-            //if(err) res.send(err);
+
             Movie.aggregate([{
                     $lookup:
                         {
@@ -168,7 +167,7 @@ router.route('/review')
     .post(authJwtController.isAuthenticated, function (req, res) {
         console.log(req.body);
         var review = new Review();
-        review.movieName = req.body.movieName;
+        review.title = req.body.title;
         review.reviewerName = req.body.reviewerName;
         review.yearReleased = req.body.yearReleased;
         review.quote = req.body.quote;
@@ -189,9 +188,9 @@ router.route('/review')
     .put(authJwtController.isAuthenticated, function (req, res) {
         var qmovie = req.query.movieName;
         var qreviewer = req.query.reviewerName;
-        if (Review.findOne({movieName: qmovie} && {reviewerName: qreviewer}) != null) {
+        if (Review.findOne({title: qmovie} && {reviewerName: qreviewer}) != null) {
             var newVals = { $set: req.body };
-            Review.updateOne({movieName: qmovie} && {reviewerName: qreviewer}, newVals, function(err, obj) {
+            Review.updateOne({title: qmovie} && {reviewerName: qreviewer}, newVals, function(err, obj) {
                 if (err) res.send(err);
                 else res.json({success: true, message: 'Updated'});
             })
