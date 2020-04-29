@@ -1,4 +1,2 @@
-# postman below for testing of all MOVIE actions on the database app
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/680f7062b4c9b9f72eea)
-
-#postman below for testing of New Review actions
+# postman below for testing of all actions on the database app both /movie and /review
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/80ae2a94495a7c29ba2f)
